@@ -2,8 +2,7 @@ import React from 'react';
 
 const escalaNames = {
  c: 'Celsius',
- f: 'Fahrenheit',
- m: 'Mely'
+ f: 'Fahrenheit'
 };
 
 
