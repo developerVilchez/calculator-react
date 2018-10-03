@@ -77,13 +77,18 @@ En esta lección, expandiremos el patrón por última vez. Un componente hijo ac
 Recuerda los componentes en React solo y unicamente deben hacer una sola cosa, un solo JOB
 /* Un componente muestra el estado y otro componente muestra la forma en que puede cambiar ese estado*/
 
-### Separar componentes contenedores de componentes presentacionales(Stateless Functional Components)
+### Separar componentes contenedores(statefull) de componentes presentacionales(stateless)
 
-El container es el que tiene el estado el presentacional es el tonto, controlado
+```jsx
+//Componente presentacional
+import React from 'react'
+const Message = (props) => <h2> El agua {props.celsius >= 100 ? 'si' : 'no'} hervirá </h2> 
+export default Message
+```
 
 En resumen:
 
 - Debe existir una "single source of truth" (en lugar de "copias") para cada pieza de información que cambia dentro de una aplicación React.
-- El principio de top-down data flow de React
-- La recomendación es abstraer esa información al primer ancenstro
+- El principio de data flow de React (top-down)
+- La recomendación es abstraer esa información al primer ancenstro común
 - React developer tools (Ver el flujo de la aplicación)
